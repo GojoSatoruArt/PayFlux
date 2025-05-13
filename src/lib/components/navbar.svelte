@@ -1,4 +1,4 @@
-<script type="module">
+<script>
     import '$lib/css/system.css'
     import Button from '$lib/components/button.svelte'
     import Link from '$lib/components/link.svelte'
@@ -6,7 +6,7 @@
 
     import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
 
 	gsap.registerPlugin(ScrollTrigger);
 
