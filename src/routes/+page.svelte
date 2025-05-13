@@ -6,10 +6,6 @@
     import Button from '$lib/components/button.svelte'
     import Title from '$lib/components/content-title.svelte'
     import Card from '$lib/components/card.svelte'
-
-
-
-
 </script>
 
 
