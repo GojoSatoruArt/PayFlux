@@ -138,8 +138,13 @@ gsap.from(animateShow, {
                     
                 </div>
       
-                <div class="content-data grid grid-flow-row grid-cols-1 sm:grid-cols-2 w-full h-auto p(--spacing-main) rounded-lg  gap-5">
+                <div class="content-data grid grid-flow-row grid-cols-1 w-full h-auto p(--spacing-main) rounded-lg  gap-5">
                     
+                     <Card
+                     title = 'Get notified instantly'
+                     description = 'No clutter, just what you need.'
+                     top = 16
+                     />
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
@@ -148,17 +153,12 @@ gsap.from(animateShow, {
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
-                     top = 25
+                     top = 24
                      />
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
-                     top = 30
-                     />
-                     <Card
-                     title = 'Get notified instantly'
-                     description = 'No clutter, just what you need.'
-                     top = 35
+                     top = 28
                      />
  
                 </div>
