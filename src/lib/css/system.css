@@ -84,7 +84,7 @@ body {
   font-size: 0.875rem;
   background-color: var(--color-dark-main);
   color: var(--color-dark-maintext);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 ::-webkit-scrollbar {
   width: 0;
