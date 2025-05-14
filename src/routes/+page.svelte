@@ -88,7 +88,7 @@ gsap.from(animateShow, {
             Get Paid Today.
            </h1>
           
-           <p bind:this={animateShow[3]} class="opacity-75 text-center text-lg">No more delays. Just fast, flexible invoicing.</p>
+           <p bind:this={animateShow[3]} class="opacity-75 text-center text-(length:--fonts-md)">No more delays. Just fast, flexible invoicing.</p>
 
            <Button
            name = 'Get Started'
