@@ -13,9 +13,9 @@
     import {onMount} from 'svelte'
     import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
     import gsap from 'gsap'
-   
     register();
 
+    
 
     let target;
     let leftgph = [];
@@ -98,26 +98,25 @@
 
 
 <Section>
-    
 
 
-    <div bind:this={leftgph[1]} class="gph absolute top-0 left-25 blur-[2px]"> 
+    <div bind:this={leftgph[1]} class="gph absolute top-0 left-25 blur-[2px] w-30 sm:w-auto"> 
         <img class="svg" src="/images/gph/gph-left-1.svg" alt="">
     </div>
-    <div bind:this={leftgph[2]} class="gph absolute top-100 left-0"> 
+    <div bind:this={leftgph[2]} class="gph absolute top-100 left-0 w-30 sm:w-auto"> 
         <img class="svg" src="/images/gph/gph-left-2.svg" alt="">
     </div>
-    <div bind:this={leftgph[3]} class="gph absolute bottom-0 left-25 blur-[2px]"> 
+    <div bind:this={leftgph[3]} class="gph absolute bottom-0 left-25 blur-[2px] w-30 sm:w-auto"> 
         <img class="svg" src="/images/gph/gph-left-3.svg" alt="">
     </div>
 
-    <div bind:this={rightgph[1]} class="gph absolute top-0 right-25 blur-[2px]"> 
+    <div bind:this={rightgph[1]} class="gph absolute top-0 right-25 blur-[2px] w-30 sm:w-auto"> 
         <img class="svg" src="/images/gph/gph-right-1.svg" alt="">
     </div>
-    <div bind:this={rightgph[2]}  class="gph absolute top-100 right-0"> 
+    <div bind:this={rightgph[2]}  class="gph absolute top-100 right-0 w-30 sm:w-auto "> 
         <img class="svg" src="/images/gph/gph-right-2.svg" alt="">
     </div>
-    <div bind:this={rightgph[3]}  class="gph absolute bottom-0 right-25 blur-[2px] hover:blur-[0px]"> 
+    <div bind:this={rightgph[3]}  class="gph absolute bottom-0 right-25 blur-[2px] hover:blur-[0px] w-30 sm:w-auto"> 
         <img class="svg" src="/images/gph/gph-right-3.svg" alt="">
     </div>
 
@@ -179,7 +178,7 @@
 
 
             
-            <div class="main-content-wrap relative flex flex-col justify-stretch items-start w-full h-auto p-(--container-padding) border-b-1 border-(--color-dark-stroke)  gap-5">
+            <div class="main-content-wrap relative flex flex-col justify-stretch items-start w-full h-auto p-[0.8rem] sm:p-(--container-padding) border-b-1 border-(--color-dark-stroke)  gap-5">
    
                 <div class="content-title sticky top-25 flex justify-start items-center w-full">
         
