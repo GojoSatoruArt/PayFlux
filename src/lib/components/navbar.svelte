@@ -2,12 +2,9 @@
     import '$lib/css/system.css'
     import Button from '$lib/components/button.svelte'
     import Link from '$lib/components/link.svelte'
-
-
     import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
-
 	gsap.registerPlugin(ScrollTrigger);
 
 	onMount(() => {
@@ -23,6 +20,14 @@
             borderColor: 'var(--color-dark-stroke)',
 			duration: 0.3,
 		});
+
+
+        gsap.from(navbar, {
+            y: -100,
+            duration: 1,
+            ease: 'power1.out',
+            delay: 0.7
+        })
 	});
 
 </script>

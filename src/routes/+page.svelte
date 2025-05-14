@@ -15,6 +15,9 @@
     import gsap from 'gsap'
     register();
 
+
+
+    let animateShow = [];
     let target;
 
     onMount(()=>{
@@ -30,6 +33,21 @@
     
   });
   
+});
+
+
+gsap.from(animateShow, {
+  x: 100,
+  duration: 1,
+  scrollTrigger: {
+    trigger: animateShow,
+    start: "top 50%", 
+    toggleActions: "play none none none"
+  }, 
+  x: -10,
+  opacity: 0,
+    ease: 'power1.out',
+    stagger: 0.3,
 });
 
     })
@@ -58,7 +76,7 @@
         <div class="line absolute left-0 top-0 size-[1px]  h-full bg-(--color-dark-stroke)"></div>
         <div class="line absolute bottom-0 left-0 size-[1px]  w-full bg-(--color-dark-stroke)"></div> -->
         
-        <div class="header flex justify-center items-center h-full flex-col gap-3">
+        <div bind:this={animateShow[2]}  class="header flex justify-center items-center h-full flex-col gap-3">
 
             <div bind:this={target} class="client-message-wrap"> 
 
@@ -66,11 +84,11 @@
 
             </div>
 
-           <h1 class="text-(length:--fonts-head) text-center font-bold">
+           <h1 bind:this={animateShow[1]}  class="text-(length:--fonts-head) text-center font-bold">
             Get Paid Today.
            </h1>
           
-           <p class="opacity-75 text-center text-lg">No more delays. Just fast, flexible invoicing.</p>
+           <p bind:this={animateShow[3]} class="opacity-75 text-center text-lg">No more delays. Just fast, flexible invoicing.</p>
 
            <Button
            name = 'Get Started'
@@ -81,13 +99,13 @@
 
         <div class="header-user flex justify-center items-center flex-col gap-3 mb-25">
 
-            <p class="text-(length:--fonts-subhead)">120,000+</p>
-            <p class="opacity-55">Used by freelancers with 50+ different countries</p>
+            <p bind:this={animateShow[4]}  class="text-(length:--fonts-subhead)">120,000+</p>
+            <p bind:this={animateShow[5]}  class="opacity-55">Used by freelancers with 50+ different countries</p>
 
         </div>
         <div class="header-smtext flex justify-center items-center flex-col gap-3">
 
-            <p class="text-center text-[1.1rem] font-light">Send sleek, professional invoices your clients cant ignore — with same-day payment options built-in.</p>
+            <p bind:this={animateShow[6]}  class="text-center text-[1.1rem] font-light">Send sleek, professional invoices your clients cant ignore — with same-day payment options built-in.</p>
 
         </div>
 
