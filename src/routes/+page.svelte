@@ -12,8 +12,31 @@
     import Footer from '$lib/components/footer.svelte'  
     import Animation from '$lib/components/animations.svelte'  
     import Animations from '$lib/components/animations.svelte';
+    import gsap from 'gsap'
     register();
+
+
+    let target;
+    document.addEventListener('mousemove', (event) => {
+  
+  const xPos = event.clientX / window.innerWidth - 0.5;
+  const yPos = event.clientY / window.innerHeight - 0.5;
+
+  gsap.to(target, 1, {
+    rotationY: xPos * 50,
+    rotationX: yPos * 50,
+    
+  });
+  return () => {
+      document.removeEventListener('mousemove', () => {});
+    };
+  
+});
+
+
+
 </script>
+
 
 
 <Navbar/>

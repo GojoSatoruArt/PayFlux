@@ -81,22 +81,22 @@
 </script>
 
 
-<div bind:this={leftgph[1]} class="gph absolute top-0 left-25 blur-[2px] w-30 sm:w-auto"> 
-    <img class="svg" src="/images/gph/gph-left-1.svg" alt="">
-</div>
-<div bind:this={leftgph[2]} class="gph absolute top-100 left-0 w-30 sm:w-auto"> 
-    <img class="svg" src="/images/gph/gph-left-2.svg" alt="">
-</div>
-<div bind:this={leftgph[3]} class="gph absolute bottom-0 left-25 blur-[2px] w-30 sm:w-auto"> 
-    <img class="svg" src="/images/gph/gph-left-3.svg" alt="">
-</div>
+    <div bind:this={leftgph[1]} class="gph absolute top-0 left-25 blur-[2px] w-30 sm:w-auto"> 
+        <img class="svg" src="/images/gph/gph-left-1.svg" alt="">
+    </div>
+    <div bind:this={leftgph[2]} class="gph absolute top-100 left-0 w-30 sm:w-auto"> 
+        <img class="svg" src="/images/gph/gph-left-2.svg" alt="">
+    </div>
+    <div bind:this={leftgph[3]} class="gph absolute bottom-0 left-25 blur-[2px] w-30 sm:w-auto"> 
+        <img class="svg" src="/images/gph/gph-left-3.svg" alt="">
+    </div>
 
-<div bind:this={rightgph[1]} class="gph absolute top-0 right-25 blur-[2px] w-30 sm:w-auto"> 
-    <img class="svg" src="/images/gph/gph-right-1.svg" alt="">
-</div>
-<div bind:this={rightgph[2]}  class="gph absolute top-100 right-0 w-30 sm:w-auto "> 
-    <img class="svg" src="/images/gph/gph-right-2.svg" alt="">
-</div>
-<div bind:this={rightgph[3]}  class="gph absolute bottom-0 right-25 blur-[2px] hover:blur-[0px] w-30 sm:w-auto"> 
-    <img class="svg" src="/images/gph/gph-right-3.svg" alt="">
-</div>
+    <div bind:this={rightgph[1]} class="gph absolute top-0 right-25 blur-[2px] w-30 sm:w-auto"> 
+        <img class="svg" src="/images/gph/gph-right-1.svg" alt="">
+    </div>
+    <div bind:this={rightgph[2]}  class="gph absolute top-100 right-0 w-30 sm:w-auto "> 
+        <img class="svg" src="/images/gph/gph-right-2.svg" alt="">
+    </div>
+    <div bind:this={rightgph[3]}  class="gph absolute bottom-0 right-25 blur-[2px] hover:blur-[0px] w-30 sm:w-auto"> 
+        <img class="svg" src="/images/gph/gph-right-3.svg" alt="">
+    </div>
