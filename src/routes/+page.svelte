@@ -143,22 +143,22 @@ gsap.from(animateShow, {
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
-                     top = 20
+
                      />
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
-                     top = 25
+
                      />
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
-                     top = 30
+ 
                      />
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
-                     top = 35
+
                      />
  
                 </div>
