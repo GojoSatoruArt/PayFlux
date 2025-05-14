@@ -10,13 +10,15 @@
     import Card from '$lib/components/card.svelte'
     import Tag from '$lib/components/tag.svelte'
     import Footer from '$lib/components/footer.svelte'  
-    import Animation from '$lib/components/animations.svelte'  
     import Animations from '$lib/components/animations.svelte';
+    import {onMount} from 'svelte'
     import gsap from 'gsap'
     register();
 
-
     let target;
+
+    onMount(()=>{
+
     document.addEventListener('mousemove', (event) => {
   
   const xPos = event.clientX / window.innerWidth - 0.5;
@@ -24,19 +26,19 @@
 
   gsap.to(target, 1, {
     rotationY: xPos * 50,
-    rotationX: yPos * 50,
+    rotationX: yPos * 80,
     
   });
-  return () => {
-      document.removeEventListener('mousemove', () => {});
-    };
   
 });
+
+    })
+
+
 
 
 
 </script>
-
 
 
 <Navbar/>
@@ -46,7 +48,7 @@
 <Section>
 
 
-    <Animation/>
+    <Animations/>
    
     
 
