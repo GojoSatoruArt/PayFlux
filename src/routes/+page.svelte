@@ -1,9 +1,5 @@
 <script>
-
-    
-
-import { register } from 'swiper/element/bundle';
-register();
+    import { register } from 'swiper/element/bundle';
     import '$lib/css/system.css'
     import Navbar from '$lib/components/navbar.svelte'
     import Client from '$lib/components/client.svelte'
@@ -13,7 +9,87 @@ register();
     import Title from '$lib/components/content-title.svelte'
     import Card from '$lib/components/card.svelte'
     import Tag from '$lib/components/tag.svelte'
-    import Footer from '$lib/components/footer.svelte'
+    import Footer from '$lib/components/footer.svelte'    
+    import {onMount} from 'svelte'
+    import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
+    import gsap from 'gsap'
+   
+    register();
+
+
+    let target;
+    let leftgph = [];
+    let rightgph = [];
+    onMount (() => {
+
+        const leftElements = [leftgph[1],leftgph[2],leftgph[3],].filter((el) => el);
+        const rightElements = [rightgph[1],rightgph[2],rightgph[3],].filter((el) => el);
+        const allElements = [...leftElements, ...rightElements];
+
+    gsap.from(allElements, {
+        y: 100,
+        opacity: 0,
+        stagger: {
+    amount: 1,
+    from: "random"
+  }
+    })
+
+
+
+    leftElements.forEach((el, i) => {
+      gsap.to(el, {
+        scrollTrigger: {
+          trigger: 'body',
+          start: `top+=${i * 50} top`, // Offset start for stagger
+          scrub: true,
+          toggleActions: 'play none none reverse',
+        },
+        x: -500,
+        rotation: 360,
+        ease: 'power1.out',
+        stagger: 0.3,
+        duration: 1,
+      });
+    });
+
+    rightElements.forEach((el, i) => {
+      gsap.to(el, {
+        scrollTrigger: {
+          trigger: 'body',
+          start: `top+=${i * 50} top`, // Offset start for stagger
+          scrub: true,
+          toggleActions: 'play none none reverse',
+        },
+        x: 500,
+        rotation: 360,
+        ease: 'power1.out',
+        duration: 1,
+        stagger: {
+    amount: 2,
+    from: "random"
+  }
+      });
+    });
+      
+        document.addEventListener('mousemove', (event) => {
+  
+      const xPos = event.clientX / window.innerWidth - 0.5;
+      const yPos = event.clientY / window.innerHeight - 0.5;
+
+      gsap.to(target, 1, {
+        rotationY: xPos * 50,
+        rotationX: yPos * 50,
+        
+      });
+      
+    });
+
+    // Cleanup event listener on component destroy
+    return () => {
+      document.removeEventListener('mousemove', () => {});
+    };
+    });
 </script>
 
 
@@ -22,8 +98,33 @@ register();
 
 
 <Section>
-
     
+
+
+    <div bind:this={leftgph[1]} class="gph absolute top-0 left-25 blur-[2px]"> 
+        <img class="svg" src="/images/gph/gph-left-1.svg" alt="">
+    </div>
+    <div bind:this={leftgph[2]} class="gph absolute top-100 left-0"> 
+        <img class="svg" src="/images/gph/gph-left-2.svg" alt="">
+    </div>
+    <div bind:this={leftgph[3]} class="gph absolute bottom-0 left-25 blur-[2px]"> 
+        <img class="svg" src="/images/gph/gph-left-3.svg" alt="">
+    </div>
+
+    <div bind:this={rightgph[1]} class="gph absolute top-0 right-25 blur-[2px]"> 
+        <img class="svg" src="/images/gph/gph-right-1.svg" alt="">
+    </div>
+    <div bind:this={rightgph[2]}  class="gph absolute top-100 right-0"> 
+        <img class="svg" src="/images/gph/gph-right-2.svg" alt="">
+    </div>
+    <div bind:this={rightgph[3]}  class="gph absolute bottom-0 right-25 blur-[2px] hover:blur-[0px]"> 
+        <img class="svg" src="/images/gph/gph-right-3.svg" alt="">
+    </div>
+
+
+   
+    
+
     <Container>
 
         <!-- <div class="line absolute right-0 top-0 size-[1px] h-full bg-(--color-dark-stroke)"></div>
@@ -32,11 +133,17 @@ register();
         
         <div class="header flex justify-center items-center h-full flex-col gap-3">
 
-           <h1 class="text-(length:--fonts-head) font-bold">
+            <div bind:this={target} class="client-message-wrap"> 
+
+                <img class="svg" src="/images/message.svg" alt="">
+
+            </div>
+
+           <h1 class="text-(length:--fonts-head) text-center font-bold">
             Get Paid Today.
            </h1>
           
-           <p class="opacity-75 text-lg">No more delays. Just fast, flexible invoicing.</p>
+           <p class="opacity-75 text-center text-lg">No more delays. Just fast, flexible invoicing.</p>
 
            <Button
            name = 'Get Started'
@@ -45,7 +152,7 @@ register();
 
         </div>
 
-        <div class="header-user flex justify-center items-center flex-col gap-3 mb-50">
+        <div class="header-user flex justify-center items-center flex-col gap-3 mb-25">
 
             <p class="text-(length:--fonts-subhead)">120,000+</p>
             <p class="opacity-55">Used by freelancers with 50+ different countries</p>
@@ -152,8 +259,7 @@ register();
 
                     <div class="card w-full h-full flex justify-center items-center overflow-hidden">
 
-                        <swiper-container slides-per-view="auto" space-between="10"
-                        autoplay-delay="3000" centeredSlides="true">
+                        <swiper-container slides-per-view="auto" space-between="10" autoplay-delay="3000" centeredSlides="true">
                             <swiper-slide class="flex justify-center items-center w-fit">
                                 <Client/>
                             </swiper-slide>
