@@ -124,7 +124,8 @@ gsap.from(animateShow, {
 
 
             
-            <div class="main-content-wrap relative flex flex-col justify-stretch items-start w-full h-auto p-[0.8rem] sm:p-(--container-padding) border-b-1 border-(--color-dark-stroke)  gap-5">
+            <div class="main-content-wrap relative flex flex-col justify-stretch items-start w-full h-auto p-[0.8rem] sm:p-(--container-padding) border-b-1 border-(--color-dark-stroke) gap-5
+            ">
    
                 <div class="content-title sticky top-25 flex justify-start items-center w-full">
         
