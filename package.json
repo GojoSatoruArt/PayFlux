@@ -26,10 +26,8 @@
 		"@tailwindcss/vite": "^4.1.6",
 		"autoprefixer": "^10.4.21",
 		"gsap": "^3.13.0",
-		"postcss": "^8.5.3",
 		"svelte-carousel": "^1.0.25",
 		"svelte-preprocess": "^6.0.3",
-		"swiper": "^11.2.6",
-		"tailwindcss": "^4.1.6"
+		"swiper": "^11.2.6"
 	}
 }
