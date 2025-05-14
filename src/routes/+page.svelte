@@ -1,11 +1,19 @@
 <script>
+
+    
+
+import { register } from 'swiper/element/bundle';
+register();
     import '$lib/css/system.css'
     import Navbar from '$lib/components/navbar.svelte'
+    import Client from '$lib/components/client.svelte'
     import Container from '$lib/components/container.svelte'
     import Section from '$lib/components/section.svelte'
     import Button from '$lib/components/button.svelte'
     import Title from '$lib/components/content-title.svelte'
     import Card from '$lib/components/card.svelte'
+    import Tag from '$lib/components/tag.svelte'
+    import Footer from '$lib/components/footer.svelte'
 </script>
 
 
@@ -15,8 +23,13 @@
 
 <Section>
 
+    
     <Container>
 
+        <!-- <div class="line absolute right-0 top-0 size-[1px] h-full bg-(--color-dark-stroke)"></div>
+        <div class="line absolute left-0 top-0 size-[1px]  h-full bg-(--color-dark-stroke)"></div>
+        <div class="line absolute bottom-0 left-0 size-[1px]  w-full bg-(--color-dark-stroke)"></div> -->
+        
         <div class="header flex justify-center items-center h-full flex-col gap-3">
 
            <h1 class="text-(length:--fonts-head) font-bold">
@@ -40,7 +53,7 @@
         </div>
         <div class="header-smtext flex justify-center items-center flex-col gap-3">
 
-            <p>Send sleek, professional invoices your clients cant ignore — with same-day payment options built-in.</p>
+            <p class="text-center text-[1.1rem] font-light">Send sleek, professional invoices your clients cant ignore — with same-day payment options built-in.</p>
 
         </div>
 
@@ -59,11 +72,12 @@
 
 
             
-            <div class="main-content-wrap relative flex flex-col lg:flex-row justify-stretch items-start w-full h-auto p-(--container-padding) border-b-1 border-(--color-dark-stroke)  gap-5">
+            <div class="main-content-wrap relative flex flex-col justify-stretch items-start w-full h-auto p-(--container-padding) border-b-1 border-(--color-dark-stroke)  gap-5">
    
-                <div class="content-title sticky top-25 lg:top-25 flex justify-start items-center w-full">
+                <div class="content-title sticky top-25 flex justify-start items-center w-full">
         
                     <Title
+                    showTag = true
                     tag = 'Why PayFlux?'
                     title='A modern tool built for solo freelancers.'
                     description ='Stop using bloated software made for big companies. FastBill keeps it lean, clean, and fast.'
@@ -103,6 +117,7 @@
 
                 
                 <Title
+                showTag = true
                 tag = 'Web Application'
                 title='Designed for speed and simplicity.'
                 description ='No bloated dashboards. No confusing steps. Just a clean, focused experience — built so you (and your clients) can move fast without friction.'
@@ -117,12 +132,68 @@
             </div>
 
 
+
+
+            <div class="main-content-wrap relative flex flex-col justify-stretch items-center w-full h-auto p-(--container-padding) border-b-1 border-(--color-dark-stroke) rounded-lg gap-10">
+
+                
+            <Tag
+            name = 'Testimony'
+            />
+
+
+
+                <div class="app-image relative w-full h-auto auto rounded-lg">
+                    
+                    <img class="gradient absolute -right-1 z-10 h-full pointer-events-none" src="/images/gradient.svg" alt=""> 
+                    <img class="gradient absolute -left-1 z-10 h-full rotate-180
+                    pointer-events-none" src="/images/gradient.svg" alt=""> 
+
+
+                    <div class="card w-full h-full flex justify-center items-center overflow-hidden">
+
+                        <swiper-container slides-per-view="auto" space-between="10"
+                        autoplay-delay="3000" centeredSlides="true">
+                            <swiper-slide class="flex justify-center items-center w-fit">
+                                <Client/>
+                            </swiper-slide>
+                            <swiper-slide class="flex justify-center items-center w-fit">
+                                <Client/>
+                            </swiper-slide>
+                            <swiper-slide class="flex justify-center items-center w-fit">
+                                <Client/>
+                            </swiper-slide>
+                            <swiper-slide class="flex justify-center items-center w-fit">
+                                <Client/>
+                            </swiper-slide>
+                            <swiper-slide class="flex justify-center items-center w-fit">
+                                <Client/>
+                            </swiper-slide>
+                         
+                          </swiper-container>
+                    </div>
+
+
+                </div>
+
+                <Title
+                textalign = "center"
+                align = "center"
+                title='Loved by freelancers, creators, and consultants worldwide!'
+                description ='FastBill helps thousands get paid faster, with less hassle. Built for real people who value time, trust, and simplicity.'
+                />
+
+            </div>
+
+
         </div>
 
 
        
    
-   </Container>
+    </Container>
 
 
 
+
+<Footer/>

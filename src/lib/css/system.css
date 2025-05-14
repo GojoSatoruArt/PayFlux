@@ -3,21 +3,35 @@
 
 @font-face {
   font-family: "BDOGrotesk";
-  src: url("/fonts/BDOGrotesk/BDOGrotesk-Medium.ttf") format("truetype");
-  font-weight: 500;
+  src: url("/fonts/BDOGrotesk-Light.ttf") format("truetype");
+  font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "BDOGrotesk";
-  src: url("/fonts/BDOGrotesk/BDOGrotesk-Medium.ttf") format("truetype");
+  src: url("/fonts/BDOGrotesk-Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BDOGrotesk";
+  src: url("/fonts/BDOGrotesk-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BDOGrotesk";
+  src: url("/fonts/BDOGrotesk-SemiBold.ttf") format("truetype");
   font-weight: 500;
   font-style: Medium;
 }
 
 @font-face {
   font-family: "BDOGrotesk";
-  src: url("/fonts/BDOGrotesk/BDOGrotesk-Bold.ttf") format("truetype");
+  src: url("/fonts/BDOGrotesk-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: Bold;
 }
@@ -34,7 +48,7 @@
   --color-dark-cardbg: #0f0f0f;
   --color-dark-footer: #090909;
   --color-dark-cright: rgba(255, 255, 255, 0.25);
-
+  --color-dark-client: rgba(255, 255, 255, 0.035);
   /*button*/
   --button-secondary-hover: rgba(255, 255, 255, 0.05);
 
@@ -65,8 +79,8 @@
 html,
 body {
   font-family: "BDOGrotesk", sans-serif;
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 300;
+  font-size: 0.875rem;
   background-color: var(--color-dark-main);
   color: var(--color-dark-maintext);
 }
@@ -74,6 +88,10 @@ body {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+}
+
+p {
+  font-weight: 300;
 }
 
 a {
@@ -92,6 +110,7 @@ svg {
 
 button {
   cursor: pointer;
+  font-weight: 400;
 }
 
 a {
@@ -104,4 +123,21 @@ html:focus-within {
 
 button {
   line-height: 1rem;
+}
+
+#left-side,
+#top-side,
+#right-side,
+#bottom-side {
+  position: absolute;
+  background: none transparent;
+  width: 0px;
+  height: 0px;
+}
+
+#bottom-side {
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 1px;
 }
