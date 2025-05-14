@@ -6,7 +6,7 @@
     export const animateshow = (showelement) => {
   gsap.from(showelement, {
     x: -100,
-    rotation:360,
+    rotation:90,
     opacity: 0,
     duration: 0.5,
     stagger: 0.4,
