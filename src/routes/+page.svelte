@@ -11,84 +11,33 @@
     import Tag from '$lib/components/tag.svelte'
     import Footer from '$lib/components/footer.svelte'  
     import Animations from '$lib/components/animations.svelte';
-    import {onMount} from 'svelte'
-    import gsap from 'gsap'
+    import { headhover } from '$lib/components/script/hover.svelte';
+    import { animateshow } from '$lib/components/script/animateshow.svelte';
     register();
-
-
-
-    let animateShow = [];
-    let target;
-
-    onMount(()=>{
-
-    document.addEventListener('mousemove', (event) => {
-  
-  const xPos = event.clientX / window.innerWidth - 0.5;
-  const yPos = event.clientY / window.innerHeight - 0.5;
-
-  gsap.to(target, 1, {
-    rotationY: xPos * 50,
-    rotationX: yPos * 80,
-    
-  });
-  
-});
-
-
-gsap.from(animateShow, {
-  x: 100,
-  duration: 1,
-  scrollTrigger: {
-    trigger: animateShow,
-    start: "top 50%", 
-    toggleActions: "play none none none"
-  }, 
-  x: -10,
-  opacity: 0,
-    ease: 'power1.out',
-    stagger: 0.3,
-});
-
-    })
-
-
-
-
-
 </script>
 
 
 <Navbar/>
 
-
-
 <Section>
-
 
     <Animations/>
    
-    
-
     <Container>
 
-        <!-- <div class="line absolute right-0 top-0 size-[1px] h-full bg-(--color-dark-stroke)"></div>
-        <div class="line absolute left-0 top-0 size-[1px]  h-full bg-(--color-dark-stroke)"></div>
-        <div class="line absolute bottom-0 left-0 size-[1px]  w-full bg-(--color-dark-stroke)"></div> -->
-        
-        <div bind:this={animateShow[2]}  class="header flex justify-center items-center h-full flex-col gap-3">
+        <div use:animateshow class="header flex justify-center items-center h-full flex-col gap-3">
 
-            <div bind:this={target} class="client-message-wrap"> 
+            <div use:headhover class="client-message-wrap"> 
 
                 <img class="svg" src="/images/message.svg" alt="">
 
             </div>
 
-           <h1 bind:this={animateShow[1]}  class="text-(length:--fonts-head) text-center font-bold">
+           <h1 use:animateshow  class="text-(length:--fonts-head) text-center font-bold">
             Get Paid Today.
            </h1>
           
-           <p bind:this={animateShow[3]} class="opacity-75 text-center text-(length:--fonts-md)">No more delays. Just fast, flexible invoicing.</p>
+           <p use:animateshow class="opacity-75 text-center text-(length:--fonts-md)">No more delays. Just fast, flexible invoicing.</p>
 
            <Button
            name = 'Get Started'
@@ -99,34 +48,27 @@ gsap.from(animateShow, {
 
         <div class="header-user flex justify-center items-center flex-col gap-3 mb-25">
 
-            <p bind:this={animateShow[4]}  class="text-(length:--fonts-subhead)">120,000+</p>
-            <p bind:this={animateShow[5]}  class="opacity-55">Used by freelancers with 50+ different countries</p>
+            <p use:animateshow class="text-(length:--fonts-subhead)">120,000+</p>
+            <p  use:animateshow class="opacity-55">Used by freelancers with 50+ different countries</p>
 
         </div>
         <div class="header-smtext flex justify-center items-center flex-col gap-3">
 
-            <p bind:this={animateShow[6]}  class="text-center text-[1.1rem] font-light">Send sleek, professional invoices your clients cant ignore — with same-day payment options built-in.</p>
+            <p use:animateshow  class="text-center text-[1.1rem] font-light">Send sleek, professional invoices your clients cant ignore — with same-day payment options built-in.</p>
 
         </div>
-
-
-       
 
     </Container>
 
 </Section>
 
-
     <Container>
-
 
         <div class="content-container w-full border-1 rounded-lg border-(--color-dark-stroke)">
 
-
-            
             <div class="main-content-wrap relative flex flex-col justify-stretch items-start w-full h-auto p-[0.8rem] sm:p-(--container-padding) border-b-1 border-(--color-dark-stroke) gap-5
             ">
-   
+
                 <div class="content-title sticky top-25 flex justify-start items-center w-full">
         
                     <Title
@@ -148,27 +90,24 @@ gsap.from(animateShow, {
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
-                     top = 20
+                     top = 21
                      />
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
-                     top = 24
+                     top = 26
                      />
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
-                     top = 28
+                     top = 29
                      />
  
                 </div>
             </div>
 
-
-
             <div class="main-content-wrap relative flex flex-col justify-stretch items-start w-full h-auto p-(--container-padding) border-b-1 border-(--color-dark-stroke) rounded-lg gap-5">
 
-                
                 <Title
                 showTag = true
                 tag = 'Web Application'
@@ -176,32 +115,23 @@ gsap.from(animateShow, {
                 description ='No bloated dashboards. No confusing steps. Just a clean, focused experience — built so you (and your clients) can move fast without friction.'
                 />
 
-
-
                 <div class="app-image w-full overflow-hidden auto border-1 border-(--color-dark-stroke) rounded-lg">
                     <img class="w-full" src="/images/Dapp.svg" alt="">
                 </div>
 
             </div>
 
-
-
-
             <div class="main-content-wrap relative flex flex-col justify-stretch items-center w-full h-auto p-(--container-padding) border-b-1 border-(--color-dark-stroke) rounded-lg gap-10">
-
-                
+        
             <Tag
             name = 'Testimony'
             />
-
-
 
                 <div class="app-image relative w-full h-auto auto rounded-lg">
                     
                     <img class="gradient absolute -right-1 z-10 h-full pointer-events-none" src="/images/gradient.svg" alt=""> 
                     <img class="gradient absolute -left-1 z-10 h-full rotate-180
                     pointer-events-none" src="/images/gradient.svg" alt=""> 
-
 
                     <div class="card w-full h-full flex justify-center items-center overflow-hidden">
 
@@ -225,7 +155,6 @@ gsap.from(animateShow, {
                           </swiper-container>
                     </div>
 
-
                 </div>
 
                 <Title
@@ -237,15 +166,8 @@ gsap.from(animateShow, {
 
             </div>
 
-
         </div>
 
-
-       
-   
     </Container>
-
-
-
 
 <Footer/>
