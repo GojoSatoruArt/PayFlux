@@ -85,6 +85,14 @@ body {
   color: var(--color-dark-maintext);
   overflow-x: clip;
 }
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
 
 ul[role="list"],
 ol[role="list"] {

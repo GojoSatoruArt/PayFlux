@@ -139,7 +139,7 @@ gsap.from(animateShow, {
                 </div>
       
                 <div class="content-data relative flex flex-col w-full h-auto justify-start items-start  p(--spacing-main) rounded-lg  gap-5">
-
+                    
                      <Card
                      title = 'Get notified instantly'
                      description = 'No clutter, just what you need.'
