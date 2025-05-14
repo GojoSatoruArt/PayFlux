@@ -9,8 +9,9 @@ export const animateshow = (showelement) => {
       start: "top 100%",
       toggleActions: "play none none none",
     },
-    x: -10,
+    x: -50,
     opacity: 0,
+    duration: 0.5,
     stagger: 0.4,
     ease: "power1.out",
   });

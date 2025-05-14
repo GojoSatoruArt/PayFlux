@@ -14,6 +14,8 @@
     import { headhover } from '$lib/components/script/hover.svelte';
     import { animateshow } from '$lib/components/script/animateshow.svelte';
     register();
+
+
 </script>
 
 
@@ -25,11 +27,11 @@
    
     <Container>
 
-        <div use:animateshow class="header flex justify-center items-center h-full flex-col gap-3">
+        <div class="header flex justify-center items-center h-full flex-col gap-3">
 
             <div use:headhover class="client-message-wrap"> 
 
-                <img class="svg" src="/images/message.svg" alt="">
+                <img use:animateshow class="svg" src="/images/message.svg" alt="">
 
             </div>
 
@@ -69,7 +71,7 @@
             <div class="main-content-wrap relative flex flex-col justify-stretch items-start w-full h-auto p-[0.8rem] sm:p-(--container-padding) border-b-1 border-(--color-dark-stroke) gap-5
             ">
 
-                <div class="content-title sticky top-25 flex justify-start items-center w-full">
+                <div  class="content-title sticky top-25 flex justify-start items-center w-full">
         
                     <Title
                     showTag = true
