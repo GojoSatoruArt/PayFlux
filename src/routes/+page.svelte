@@ -32,7 +32,7 @@
     <Container>
         
 
-        <div class="header flex justify-center items-center h-full flex-col gap-3">
+        <div class="header flex justify-center items-center h-full flex-col gap-5 sm:gap-3">
 
             <div use:headhover class="client-message-wrap"> 
 
@@ -40,11 +40,11 @@
 
             </div>
 
-           <h1 use:animateshow class="text-5xl md:text-(length:--fonts-head) text-center font-bold">
+           <h1 use:animateshow class="text-4xl md:text-(length:--fonts-head) text-center font-bold">
             Get Paid Today.
            </h1>
           
-           <p use:animateshow class="opacity-75 text-center text-(length:--fonts-md)">No more delays. Just fast, flexible invoicing.</p>
+           <p use:animateshow class="opacity-75 text-center text-sm sm:text-(length:--fonts-md)">No more delays. Just fast, flexible invoicing.</p>
            <Button
            name = 'Get Started'
            showIcon = true
@@ -56,7 +56,7 @@
 
         <div class="header-user flex justify-center items-center flex-col gap-3 mb-5 my-15 sm:mb-25">
 
-            <p use:animateshow  class="text-(length:--fonts-subhead)">120,000+</p>
+            <p use:animateshow  class="text-[2rem] sm:text-(length:--fonts-subhead)">120,000+</p>
             <p  use:animateshow class="opacity-55">Used by freelancers with 50+ different countries</p>
 
         </div>
