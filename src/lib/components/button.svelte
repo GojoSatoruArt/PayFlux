@@ -20,6 +20,7 @@
         loading = false,
         showIcon = false,
         name = '',
+        type = '',
         defaultstyle = ''
     } =$props();
 
@@ -35,7 +36,7 @@
 
 
 
-<button use:animateshow class="{buttonClass}">
+<button type="{type}" use:animateshow class="{buttonClass}">
 {name} 
 {#if showIcon}
 <div class="button-icon size-4"><Arrow/></div>

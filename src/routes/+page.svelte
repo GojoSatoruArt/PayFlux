@@ -1,6 +1,9 @@
 <script>
-    import { register } from 'swiper/element/bundle';
     import '$lib/css/system.css'
+    import { headhover } from '$lib/components/script/hover.svelte';
+    import { animateshow } from '$lib/components/script/animateshow.svelte';
+    import { loginShow } from '$lib/components/script/popup.svelte';
+    import { register } from 'swiper/element/bundle';
     import Navbar from '$lib/components/navbar.svelte'
     import Client from '$lib/components/client.svelte'
     import Container from '$lib/components/container.svelte'
@@ -11,21 +14,23 @@
     import Tag from '$lib/components/tag.svelte'
     import Footer from '$lib/components/footer.svelte'  
     import Animations from '$lib/components/animations.svelte';
-    import { headhover } from '$lib/components/script/hover.svelte';
-    import { animateshow } from '$lib/components/script/animateshow.svelte';
+    import Signin from '$lib/components/signin.svelte';
+    import Modalbg from '$lib/components/modalbg.svelte';
     register();
-
-
 </script>
 
+{#if $loginShow}
+<Modalbg>
+    <Signin/>
+</Modalbg>
+{/if}
 
 <Navbar/>
-
 <Section>
+<Animations/>
 
-    <Animations/>
-   
     <Container>
+        
 
         <div class="header flex justify-center items-center h-full flex-col gap-3">
 
@@ -40,11 +45,12 @@
            </h1>
           
            <p use:animateshow class="opacity-75 text-center text-(length:--fonts-md)">No more delays. Just fast, flexible invoicing.</p>
-
            <Button
            name = 'Get Started'
            showIcon = true
            />
+
+        
 
         </div>
 

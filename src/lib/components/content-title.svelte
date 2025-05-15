@@ -31,7 +31,7 @@ let{
 
         
 <div class="content-title-subtext {`text-${textalign}`}">
-    <p class="opacity-75">{description}</p>
+    <p class="opacity-35 font-[100]">{description}</p>
 </div>
 
 

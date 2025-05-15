@@ -6,6 +6,11 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
 	gsap.registerPlugin(ScrollTrigger);
+    import { loginShow } from './script/popup.svelte';
+    
+    
+    
+    
 
 	onMount(() => {
 		const navbar = document.querySelector('.navbar');
@@ -33,7 +38,7 @@
 </script>
 
 
-<div class="navbar z-100 overflow-hidden bord flex flex-row justify-between content-stretch w-full fixed top-0 bg-transparent px-10 py-5 border-1 border-transparent">
+<div class="navbar z-90 overflow-hidden bord flex flex-row justify-between content-stretch w-full fixed top-0 bg-transparent px-10 py-5 border-1 border-transparent">
 
 
     <div class="navbar-brand-wrap flex justify-start items-center w-full">
@@ -66,11 +71,11 @@
         name = 'Generate Invoice'
         showIcon = true
         />
-
+        
         <Link
         name = 'Sign In'
+        onClick = {() => $loginShow = !$loginShow}
         />
-        
     </div>
 
 
