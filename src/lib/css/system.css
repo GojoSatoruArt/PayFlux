@@ -1,5 +1,6 @@
 @tailwind utilities;
 @import "tailwindcss";
+
 @font-face {
   font-family: "BDOGrotesk";
   src: url("/fonts/BDOGrotesk-Light.ttf") format("truetype");
@@ -72,7 +73,7 @@
   --fonts-lg: 1.4rem;
   --fonts-head: 3.5rem;
   --fonts-subhead: 2rem;
-  --fonts-button: 0.8rem;
+  --fonts-button: 0.875rem;
 }
 
 *,

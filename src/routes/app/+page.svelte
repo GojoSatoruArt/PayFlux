@@ -2,10 +2,6 @@
     import '$lib/css/system.css'
     import Sidebar from '$lib/components/app/sidebar.svelte'
     import Button from '$lib/components/button.svelte'
-    import Draft from '$lib/components/app/dashboardnav/draft.svelte'
-    import Paid from '$lib/components/app/dashboardnav/paid.svelte'
-    import Unpaid from '$lib/components/app/dashboardnav/unpaid.svelte'
-    import Void from '$lib/components/app/dashboardnav/void.svelte'
     import Dashboard from '$lib/components/app/dashboard.svelte'
 
 
