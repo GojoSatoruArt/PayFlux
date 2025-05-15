@@ -70,11 +70,13 @@
         <Button
         name = 'Generate Invoice'
         showIcon = true
+        to = 'app'
         />
         
         <Link
         name = 'Sign In'
         onClick = {() => $loginShow = !$loginShow}
+
         />
     </div>
 
