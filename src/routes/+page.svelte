@@ -40,7 +40,7 @@
 
             </div>
 
-           <h1 use:animateshow  class="text-(length:--fonts-head) text-center font-bold">
+           <h1 use:animateshow  class="text-5xl md:text-(length:--fonts-head) text-center font-bold">
             Get Paid Today.
            </h1>
           
@@ -54,7 +54,7 @@
 
         </div>
 
-        <div class="header-user flex justify-center items-center flex-col gap-3 mb-25">
+        <div class="header-user flex justify-center items-center flex-col gap-3 mb-5 my-15 sm:mb-25">
 
             <p use:animateshow class="text-(length:--fonts-subhead)">120,000+</p>
             <p  use:animateshow class="opacity-55">Used by freelancers with 50+ different countries</p>
@@ -62,7 +62,7 @@
         </div>
         <div class="header-smtext flex justify-center items-center flex-col gap-3">
 
-            <p use:animateshow  class="text-center text-[1.1rem] font-light">Send sleek, professional invoices your clients cant ignore — with same-day payment options built-in.</p>
+            <p use:animateshow  class="text-center text-[0.9rem] md:text-[1.1rem] font-light">Send sleek, professional invoices your clients cant ignore — with same-day payment options built-in.</p>
 
         </div>
 
