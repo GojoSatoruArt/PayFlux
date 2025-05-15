@@ -32,7 +32,7 @@
     <Container>
         
 
-        <div class="header flex justify-center items-center h-full flex-col gap-5 sm:gap-3">
+        <div class="header flex justify-center items-center h-full flex-col gap-5 sm:gap-5">
 
             <div use:headhover class="client-message-wrap"> 
 
