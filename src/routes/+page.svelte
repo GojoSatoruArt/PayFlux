@@ -17,6 +17,8 @@
     import Signin from '$lib/components/signin.svelte';
     import Modalbg from '$lib/components/modalbg.svelte';
     register();
+
+   
 </script>
 
 {#if $loginShow}
@@ -48,6 +50,7 @@
            <Button
            name = 'Get Started'
            showIcon = true
+           to = 'app'
            />
 
         

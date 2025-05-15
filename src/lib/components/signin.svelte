@@ -5,6 +5,21 @@
     import Link from "./link.svelte";
     import { loginShow } from './script/popup.svelte';
     import { popup } from './script/popupanimate.svelte';
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' && $loginShow) {
+        $loginShow = false;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  });
 </script>
 
 

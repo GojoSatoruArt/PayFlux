@@ -1,6 +1,5 @@
-@import "tailwindcss";
 @tailwind utilities;
-
+@import "tailwindcss";
 @font-face {
   font-family: "BDOGrotesk";
   src: url("/fonts/BDOGrotesk-Light.ttf") format("truetype");
@@ -51,6 +50,7 @@
   --color-dark-client: rgba(255, 255, 255, 0.035);
   --color-close-bg: #151515;
   --color-modal-bg: rgba(0, 0, 0, 0.75);
+  --app-content: rgba(255, 255, 255, 0.01);
   /*button*/
   --button-secondary-hover: rgba(255, 255, 255, 0.05);
 
@@ -58,6 +58,7 @@
   --spacing-main: 1rem;
   --spacing-main-y: 0.7rem;
   --spacing-gap: 1.5rem;
+  --spacing-sidebar: 1.1rem;
 
   /*spacing*/
   --spacing-max-w: 75rem;
@@ -67,10 +68,11 @@
   --radius-button: 0.6rem;
 
   /*font-size*/
-  --fonts-md: 1.1rem;
+  --fonts-md: 1rem;
   --fonts-lg: 1.4rem;
   --fonts-head: 3.5rem;
   --fonts-subhead: 2rem;
+  --fonts-button: 0.8rem;
 }
 
 *,
