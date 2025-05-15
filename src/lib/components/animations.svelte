@@ -67,7 +67,7 @@
 </script>
 
 <div class="absolute left-0 overflow-x-clip w-full h-full">
-  <div bind:this={leftgph[1]} class="gph absolute top-0 left-25 blur-[2px] w-30 sm:w-auto"> 
+  <div bind:this={leftgph[1]} class="gph absolute top-0 left-10 sm:left-25 blur-[2px] w-30 sm:w-auto"> 
     <img class="svg" src="/images/gph/gph-left-1.svg" alt="">
 </div>
 <div bind:this={leftgph[2]} class="gph absolute top-100 left-0 w-30 sm:w-auto"> 
@@ -77,7 +77,7 @@
     <img class="svg" src="/images/gph/gph-left-3.svg" alt="">
 </div>
 
-<div bind:this={rightgph[1]} class="gph absolute top-0 right-25 blur-[2px] w-30 sm:w-auto"> 
+<div bind:this={rightgph[1]} class="gph absolute top-0 right-10 sm:right-25 blur-[2px] w-30 sm:w-auto"> 
     <img class="svg" src="/images/gph/gph-right-1.svg" alt="">
 </div>
 <div bind:this={rightgph[2]}  class="gph absolute top-100 right-0 w-30 sm:w-auto "> 
