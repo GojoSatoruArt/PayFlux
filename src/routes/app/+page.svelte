@@ -9,7 +9,7 @@ import Reports from '$lib/components/app/reports.svelte';
 import { activeStab } from '$lib/components/script/dashboardstate.svelte';
   
 
-export let sidebarTab = ['Dashboard', 'Clients', 'Payments', 'Reports']
+export let sidebarTab = ['Dashboard', 'Clients', 'Payments', 'Reports', 'Settings']
 let active = activeStab;
 
 const setStab = (sidebarTab) =>{ 
@@ -42,7 +42,7 @@ console.log(active);
 
     <div class="sidebar-link flex justify-start flex-col items-start py-(--spacing-sidebar) w-full h-full gap-2">
 
-        {#each sidebarTab as sTab }
+        {#each sidebarTab.filter(tab => tab !== 'Settings') as sTab }
             <button on:click={() => setStab (sTab)} class="sidebar-tab flex justify-start items-center w-full py-(--spacing-main-y) px-3 bg-(--color-dark-cardbg) rounded-lg border-1 border-(--app-content) transition-all ease-in hover:bg-(--button-secondary-hover)"
             class:active={active === sTab}
             >{sTab}</button>
@@ -50,7 +50,21 @@ console.log(active);
 
     </div>
 
-    <div class="sidebar-profile w-full"></div>
+    <div class="sidebar-profile flex justify-start flex-col items-start py-(--spacing-sidebar) w-full gap-2">
+
+        <button class="sidebar-tab flex justify-start items-center w-full py-(--spacing-main-y) px-3 bg-(--color-dark-cardbg) rounded-lg border-1 border-(--app-content) transition-all ease-in hover:bg-(--button-secondary-hover)">Tutorials</button>
+
+        <button class="sidebar-tab flex justify-start items-center w-full py-(--spacing-main-y) px-3 bg-(--color-dark-cardbg) rounded-lg border-1 border-(--app-content) transition-all ease-in hover:bg-(--button-secondary-hover)">Help Center</button>
+
+        {#each sidebarTab.filter(tab => tab === 'Settings') as sTab }
+            <button on:click={() => setStab (sTab)} class="sidebar-tab flex justify-start items-center w-full py-(--spacing-main-y) px-3 bg-(--color-dark-cardbg) rounded-lg border-1 border-(--app-content) transition-all ease-in hover:bg-(--button-secondary-hover)"
+            class:active={active === sTab}
+            >{sTab}</button>
+        {/each}
+
+            
+
+    </div>
 
 </div>
       <!--sidebar-->
