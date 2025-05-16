@@ -7,8 +7,7 @@ import Payment from '$lib/components/app/payment.svelte';
 import Reports from '$lib/components/app/reports.svelte';
 import { activeStab } from '$lib/components/script/dashboardstate.svelte';
 import { profileSwitch } from '$lib/components/script/popup.svelte';
-  import { popupreverse } from '$lib/components/script/popupanimate.svelte';
-  import { fade, fly } from 'svelte/transition';
+import { fade, fly } from 'svelte/transition';
 
 //navigation
 export let sidebarTab = ['Dashboard', 'Clients', 'Payments', 'Reports', 'Settings']
@@ -77,7 +76,7 @@ console.log(active);
             {#if $profileSwitch}
       
             
-            <div in:fly={{ y: 50 }} out:fly={{ y: 50 }}  class="popup flex  items-stretch flex-col p-2 absolute bottom-13 left-0 w-full
+            <div in:fly={{ y: 50, duration:150}} out:fly={{ y: 50, duration:150 }}  class="popup flex  items-stretch flex-col p-2 absolute bottom-13 left-0 w-full
             bg-(--color-dark-cardbg) rounded-lg border-1 border-(--color-dark-stroke) transition-all ease-in gap-3">
 
             <div class="profile-option w-auto flex justify-between items-center px-2 py-3 rounded-md   hover:bg-(--button-secondary-hover)  cursor-pointer gap-3">
