@@ -10,7 +10,7 @@
     import { mobilenav } from './script/popup.svelte';
     import Title from './content-title.svelte';
     import { fly } from 'svelte/transition';
-    let isRotated = true;
+    let isRotated = false;
     
     
     
