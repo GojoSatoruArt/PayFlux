@@ -39,7 +39,7 @@ function togglemobile() {
 
 </script>
 
-
+<!--mobilenav-top-->
 {#if $mobilenav}
 
 <div in:fly={{y:-100, duration:100}} out:fly={{y:-100, duration:100}} class="mobile-navbar fixed z-110 top-15 pt-5 pb-15 w-full h-full flex justify-between items-start flex-col bg-(--color-dark-cardbg)">
@@ -80,7 +80,7 @@ function togglemobile() {
 </div>
             
 {/if}
-
+<!--mobilenav-top-->
 
 
     <div class="app relative flex flex-col md:flex-row  justify-start items-center w-full h-dvh">
@@ -118,7 +118,7 @@ function togglemobile() {
 
             <button on:click={() => $appdropdown = !$appdropdown} class="profile-button relative sidebar-tab flex justify-between items-center w-full px-3 py-5 bg-(--color-dark-cardbg) rounded-lg border-1 border-(--color-hover-dark-stroke) transition-all ease-in hover:bg-(--button-secondary-hover) cursor-pointer">
 
-                {#if !$appdropdown}
+                {#if $appdropdown}
 
                 <div class="mobile-dropdown overflow-hidden absolute top-17 left-0 w-full h-auto flex justify-center items-center flex-col bg-(--color-dark-main) rounded-lg border-1 border-(--color-hover-dark-stroke) p-3 gap-3">
 
