@@ -5,19 +5,18 @@
     import Void from '$lib/components/app/dashboardnav/void.svelte'
     let activeTab = $state('Draft')
 
-const tab = ['Draft', 'Unpaid', 'Paid', 'Void']
+let tab = ['Draft', 'Unpaid', 'Paid', 'Void']
 
 const setTab = (tab) => {
     activeTab = tab;
     console.log($state.snapshot(activeTab));
 }
 
-const tabContent = {
+let tabContent = {
 Draft: Draft,
 Unpaid: Unpaid,
 Paid: Paid,
 Void: Void,
-
 };
 </script>
 
@@ -30,7 +29,7 @@ Void: Void,
 
     {#each tab as tabs }
 
-    <button on:click={() => setTab(tabs)} class="invoice-tab flex justify-center items-center py-1.5 px-2 border-1 rounded-md border-[var(--color-dark-stroke)] transition-all ease-in hover:bg-(--button-secondary-hover)"
+    <button on:click={() => setTab(tabs)} class="invoice-tab flex justify-center items-center py-1.5 px-2 border-1 rounded-md border-(--color-dark-stroke) transition-all ease-in hover:bg-(--button-secondary-hover)"
     class:active={activeTab === tabs}   
     >
     {tabs}</button>
@@ -41,9 +40,9 @@ Void: Void,
 
     <div class="dashboard-content w-full h-full flex justify-center items-center bg-(--app-content) rounded-lg border-1 border-(--color-dark-stroke)">
 
-        {#key activeTab}
-<svelte:component this={tabContent[activeTab]} />
-{/key}
+    {#key activeTab}
+    <svelte:component this={tabContent[activeTab]} />
+        {/key}
 
     </div>
 </div>
