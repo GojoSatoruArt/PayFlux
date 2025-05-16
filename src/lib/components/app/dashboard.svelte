@@ -24,7 +24,7 @@ Void: Void,
 
 
 
-<div class="app-dashboard w-full h-full py-(--spacing-sidebar) flex justify-start items-start flex-col gap-10">
+<div class="app-dashboard w-full h-full flex justify-start items-start flex-col gap-10">
     <div class="dashboard-tab flex justify-start items-start w-full py-(--spacing-sidebar) border-b-1 border-(--color-dark-stroke) gap-2">
 
     {#each tab as tabs }
