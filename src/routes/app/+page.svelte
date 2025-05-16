@@ -213,14 +213,14 @@ function togglemobile() {
       
 
       
-        <div class="app-main w-full h-full flex justify-center items-center bg-(--color-dark-cardbg) p-10">
+        <div class="app-main w-full h-full flex justify-center items-center bg-(--color-dark-cardbg) py-5 md:py-10 px-5">
 
             <div class="app-content max-w-5xl w-full h-full flex justify-center items-start flex-col gap-1">
 
 
 
 
-                <button on:click={() => $appdropdown = !$appdropdown} class="profile-button flex md:hidden relative sidebar-tab justify-between items-center w-full p-3 bg-(--color-dark-cardbg) rounded-lg border-1 border-(--color-hover-dark-stroke) transition-all ease-in hover:bg-(--button-secondary-hover) cursor-pointer">
+                <button on:click={() => $appdropdown = !$appdropdown} class="profile-button flex md:hidden relative sidebar-tab justify-between items-center w-full p-3 bg-(--color-dark-cardbg) rounded-lg border-1 border-(--color-hover-dark-stroke) transition-all ease-in hover:bg-(--button-secondary-hover) cursor-pointer mb-5">
 
                     {#if $appdropdown}
     
