@@ -120,7 +120,7 @@ function togglemobile() {
 
                 {#if $appdropdown}
 
-                <div class="mobile-dropdown overflow-hidden absolute top-17 left-0 w-full h-auto flex justify-center items-center flex-col bg-(--color-dark-main) rounded-lg border-1 border-(--color-hover-dark-stroke) p-3 gap-3">
+                <div in:fly={{y:-100, duration:100}} out:fly={{y:-100, duration:100}} class="mobile-dropdown overflow-hidden absolute top-17 left-0 w-full h-auto flex justify-center items-center flex-col bg-(--color-dark-main) rounded-lg border-1 border-(--color-hover-dark-stroke) p-3 gap-3">
 
                     {#each sidebarTab.filter(tab => tab !== 'Settings') as sTab }
                 <button on:click={() => setStab (sTab)} class="sidebar-tab flex justify-start items-center w-full py-5 px-5 bg-(--color-dark-cardbg) border-1 border-(--app-content) rounded-lg transition-all ease-in hover:bg-(--button-secondary-hover)"
