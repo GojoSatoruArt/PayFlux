@@ -12,7 +12,7 @@
 
 
 
-<footer class="flex justify-center items-center py-10 w-full bg-(--color-dark-footer) mt-10 border-t-1 border-(--color-dark-stroke)">
+<footer class="flex justify-center items-center py-10 px-5 w-full bg-(--color-dark-footer) mt-10 border-t-1 border-(--color-dark-stroke)">
 
  <Container>
     <div class="footer-wrap flex items-start flex-col lg:flex-row w-full h-full gap-10 ">
@@ -31,7 +31,7 @@
     <div class="footer-links flex justify-start flex-row items-start w-full h-full">
 
 
-        <div class="footer-link-wrap flex justify-between w-full">
+        <div class="footer-link-wrap flex justify-between flex-wrap w-full">
 
             <Footerlink
             title = 'Product'>
